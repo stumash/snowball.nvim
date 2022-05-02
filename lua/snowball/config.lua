@@ -11,7 +11,7 @@ M.WS = 'whitespace'
 local config = {}
 local default_config = {
   labels = {
-    prefix = 'WS '
+    prefix = 'WS ',
     trailing = 'trailing', -- or ﬋
     mixed_indent = 'mix-indent', -- or 
   },
