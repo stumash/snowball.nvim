@@ -43,7 +43,9 @@ require'feline'.setup {
 There are also some convenience methods and tables to make debugging and custom configuration easier in certain cases.
 
 ```lua
+print(snowball.provider()) -- show the current output of the provider
 print(vim.pretty_print(snowball.get_config())) -- show current config
+
 print(vim.pretty_print(snowball.labels_alternate)) -- { prefix = '', trailing = '﬋', mixed_indent = '' }
 -- so we can do this:
 snowball.setup { labels = snowball.labels_alternate }
