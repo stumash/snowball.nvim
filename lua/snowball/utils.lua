@@ -65,7 +65,7 @@ function M.add_whitespace_component(components, side, pos)
     active = vim.deepcopy(components.active),
     inactive = vim.deepcopy(components.inactive),
   }
-  table.insert(my_components.active[side], pos, config.get_config().component)
+  table.insert(my_components.active[side], pos, get_config().component)
   return my_components
 end
 
