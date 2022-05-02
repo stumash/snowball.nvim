@@ -1,12 +1,12 @@
-local utils = require'utils'
-local config = require'config'
+local utils = require'snowball.utils'
+local config = require'snowball.config'
 
 local M = {}
 
 M.configure_whitespace_component = config.configure_whitespace_component
 M.get_config = config.get_config
 M.labels_alternate = config.labels_alternate
-M.provider_name = require'config'.WS
+M.provider_name = config.WS
 
 function M.add_whitespace_component(components)
   local my_components = {

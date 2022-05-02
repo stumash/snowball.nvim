@@ -1,4 +1,4 @@
-local get_config = require'config'.get_config
+local get_config = require'snowball.config'.get_config
 
 local M = {}
 
