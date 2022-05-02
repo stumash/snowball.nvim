@@ -6,13 +6,13 @@ whitespace and mixed-indentation.
 'Snowball' is a common name for white cats, and this is a whitespace-related add-on for
 [feline.nvim](https://github.com/feline-nvim/feline.nvim) :smile_cat:.
 
-# Installation
+## Installation
 
 ```vim
 Plug 'stumash/snowball.nvim'
 ```
 
-# Usage
+## Usage
 
 ```lua
 local snowball = require'snowball'
@@ -20,7 +20,7 @@ local snowball = require'snowball'
 -- these are the defaults, you can call this function with no arguments if you don't want to change them
 snowball.configure_whitespace_component {
   labels = {
-    prefix = 'WS'
+    prefix = 'WS '
     trailing = 'trailing',
     mixed_indent = 'mix-indent',
   },
@@ -44,8 +44,10 @@ There are also some convenience methods and tables to make debugging and custom 
 
 ```lua
 print(vim.pretty_print(snowball.get_config())) -- show current config
-print(vim.pretty_print(snowball.labels_alternate)) -- { prefix = 'WS ', trailing = '﬋', mixed_indent = '' }
+print(vim.pretty_print(snowball.labels_alternate)) -- { prefix = '', trailing = '﬋', mixed_indent = '' }
 -- so we can do this:
 snowball.configure_whitespace_component { labels = snowball.labels_alternate }
 -- and then the same needed call to require'feline'.setup as above
 ```
+
+## Screenshots
