@@ -9,7 +9,7 @@ whitespace and mixed-indentation.
 # Installation
 
 ```vim
-Plug 'stumash/badwhitespace.nvim'
+Plug 'stumash/snowball.nvim'
 ```
 
 # Usage
