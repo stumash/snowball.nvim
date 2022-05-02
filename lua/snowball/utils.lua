@@ -53,4 +53,20 @@ function M.whitespace_provider()
   end
 end
 
+-- @param table components: a table of feline components
+-- @param number side: on which side of the feline status bar should have the whitespace component (1=left, 2=right)? (default=2)
+-- @param number pos: in which position (left-to-right, 1 to N) of the chosen side should the compoenent be? (default=1)
+-- @return new feline components table with a whitespace component as the firs elem on the right
+function M.add_whitespace_component(components, side, pos)
+  if side == nil then side = 2 end -- default to right side of status bar
+  if pos == nil then pos = 1 end -- default to first (leftmost) component of components on a given side
+
+  local my_components = {
+    active = vim.deepcopy(components.active),
+    inactive = vim.deepcopy(components.inactive),
+  }
+  table.insert(my_components.active[side], pos, config.get_config().component)
+  return my_components
+end
+
 return M
