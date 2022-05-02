@@ -46,7 +46,7 @@ function M.whitespace_provider()
     end
 
     if mix ~= 0 then
-      add_to_s(labels.mix_indent .. ':' .. mix)
+      add_to_s(labels.mixed_indent .. ':' .. mix)
     end
 
     return labels.prefix .. s
