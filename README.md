@@ -25,7 +25,7 @@ snowball.setup {
     mixed_indent = 'mix-indent',
   },
   component = {
-    provider = snowball.provider_name, -- 'whitespace'
+    provider = snowball.provider_name,
     update = 'BufWrite',
     hl = { fg = 'yellow' },
     truncate = true,
@@ -35,7 +35,7 @@ snowball.setup {
 }
 
 require'feline'.setup {
-  custom_providers = { whitespace = snowball.provider },
+  custom_providers = { [snowball.provider_name] = snowball.provider },
   components = snowball.add_whitespace_components(require'feline.presets'.default),
 }
 ```
