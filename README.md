@@ -1,4 +1,4 @@
-# SNOWBALL
+# Snowball
 
 A provider-plugin for [feline.nvim](https://github.com/feline-nvim/feline.nvim) that tells you about trailing
 whitespace and mixed-indentation.
