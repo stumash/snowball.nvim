@@ -32,7 +32,7 @@ M.labels_alternate = {
 }
 
 -- let the user cofigure the component
-function M.configure_whitespace_component(user_config)
+function M.setup(user_config)
   -- default config
   copy_values(default_config, config)
   -- user-provided labels

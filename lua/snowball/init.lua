@@ -3,7 +3,7 @@ local config = require'snowball.config'
 
 local M = {}
 
-M.configure_whitespace_component = config.configure_whitespace_component
+M.setup = config.setup
 M.get_config = config.get_config
 M.labels_alternate = config.labels_alternate
 M.provider_name = config.provider_name
