@@ -7,12 +7,11 @@ local function copy_values(from, into)
 end
 
 M.provider_name = 'whitespace'
-local default_prefix = 'WS '
 
 local config = {}
 local default_config = {
   labels = {
-    prefix = default_prefix,
+    prefix = 'WS ',
     trailing = 'trailing',
     mixed_indent = 'mix-indent',
   },

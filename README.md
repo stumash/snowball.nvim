@@ -17,7 +17,7 @@ Plug 'stumash/snowball.nvim'
 ```lua
 local snowball = require'snowball'
 
--- these are the defaults, you can omit this call if you want don't want to change them
+-- these are the defaults, you can call this function with no arguments if you don't want to change them
 snowball.configure_whitespace_component {
   labels = {
     prefix = 'WS'
@@ -25,7 +25,7 @@ snowball.configure_whitespace_component {
     mixed_indent = 'mix-indent',
   },
   component = {
-    provider = WS,
+    provider = snowball.provider_name, -- 'whitespace'
     update = 'BufWrite',
     hl = { fg = 'yellow' },
     truncate = true,
@@ -35,7 +35,7 @@ snowball.configure_whitespace_component {
 }
 
 require'feline'.setup {
-  custom_providers = { whitespace = snowball.provider_name },
+  custom_providers = { whitespace = snowball.provider },
   components = snowball.add_whitespace_components(require'feline.presets'.default),
 }
 ```
