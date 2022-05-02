@@ -26,7 +26,7 @@ local default_config = {
 }
 
 M.labels_alternate= {
-  prefix = 'WS'
+  prefix = 'WS',
   trailing = '﬋',
   mixed_indent = '',
 }
