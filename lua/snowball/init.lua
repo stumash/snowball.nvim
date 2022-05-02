@@ -9,6 +9,8 @@ M.labels_alternate = config.labels_alternate
 M.provider_name = config.WS
 
 function M.add_whitespace_component(components)
+  config.configure_whitespace_component()
+
   local my_components = {
     active = vim.deepcopy(components.active),
     inactive = vim.deepcopy(components.inactive),
