@@ -7,16 +7,17 @@ local function copy_values(from, into)
 end
 
 M.WS = 'whitespace'
+local default_prefix = 'WS '
 
 local config = {}
 local default_config = {
   labels = {
-    prefix = 'WS ',
-    trailing = 'trailing', -- or ﬋
-    mixed_indent = 'mix-indent', -- or 
+    prefix = default_prefix,
+    trailing = 'trailing',
+    mixed_indent = 'mix-indent',
   },
   component = {
-    provider = WS,
+    provider = M.WS,
     update = 'BufWrite',
     hl = { fg = 'yellow' },
     truncate = true,
@@ -25,8 +26,8 @@ local default_config = {
   }
 }
 
-M.labels_alternate= {
-  prefix = 'WS',
+M.labels_alternate = {
+  prefix = '',
   trailing = '﬋',
   mixed_indent = '',
 }
