@@ -2,10 +2,12 @@ local get_config = require'snowball.config'.get_config
 
 local M = {}
 
+local function search(pattern) return vim.fn.search(pattern, 'nw') end
+
 -- find the first line with traililng whitespace
 -- @return line number of matching line, else 0
 function first_trailing_whitespace_line()
-  vim.fn.search([[\s$]], 'nw')
+  return search[[\s$]]
 end
 
 -- find the first line with mixed indentation
@@ -14,7 +16,7 @@ function first_mix_indent_line()
   local tst = [[(^\t* +\t\s*\S)]]
   local tls = string.format([[(^\t+ {%d,}\S)]], vim.bo.tabstop)
   local pattern = string.format([[\v%s|%s]], tst, tls)
-  return vim.fn.search(pattern, 'nw')
+  return search(pattern)
 end
 
 -- @return the string to add to the statusline

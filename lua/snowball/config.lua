@@ -6,7 +6,7 @@ local function copy_values(from, into)
   end
 end
 
-M.WS = 'whitespace'
+M.provider_name = 'whitespace'
 local default_prefix = 'WS '
 
 local config = {}
@@ -17,7 +17,7 @@ local default_config = {
     mixed_indent = 'mix-indent',
   },
   component = {
-    provider = M.WS,
+    provider = M.provider_name,
     update = 'BufWrite',
     hl = { fg = 'yellow' },
     truncate = true,

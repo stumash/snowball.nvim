@@ -6,7 +6,7 @@ local M = {}
 M.configure_whitespace_component = config.configure_whitespace_component
 M.get_config = config.get_config
 M.labels_alternate = config.labels_alternate
-M.provider_name = config.WS
+M.provider_name = config.provider_name
 
 function M.add_whitespace_component(components)
   config.configure_whitespace_component()
