@@ -53,3 +53,15 @@ snowball.setup { labels = snowball.labels_alternate }
 ```
 
 ## Screenshots
+
+Default settings, trailing whitespace (line 400) + space-indented lines (line 435) and tab-indented lines (line 400)
+
+<img width="249" alt="image" src="https://user-images.githubusercontent.com/13181078/166393983-23ad097d-c188-41fa-b950-9f2537f2853d.png">
+
+Default settings, single line with both spaces and tabs in the indentation (line 401)
+
+<img width="135" alt="image" src="https://user-images.githubusercontent.com/13181078/166394130-9607cc19-6f2b-4038-afeb-c8819790f28b.png">
+
+Alternate labels, trailing whitespace (line 401) + space-indented lines (line 400) and tab-indented lines (line 399)
+
+<img width="128" alt="image" src="https://user-images.githubusercontent.com/13181078/166394370-de575f43-fc12-4bc8-9834-619ef2d6def8.png">
