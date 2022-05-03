@@ -46,7 +46,8 @@ There are also some convenience methods and tables to make debugging and custom 
 print(snowball.provider()) -- show the current output of the provider
 print(vim.pretty_print(snowball.get_config())) -- show current config
 
-print(vim.pretty_print(snowball.labels_alternate)) -- { prefix = '', trailing = '﬋', mixed_indent = '' }
+-- NEEDS NERDFONT { prefix = '', trailing = '﬋', mixed_indent = '' }
+print(vim.pretty_print(snowball.labels_alternate))
 -- so we can do this:
 snowball.setup { labels = snowball.labels_alternate }
 -- and then the same needed call to require'feline'.setup as above
