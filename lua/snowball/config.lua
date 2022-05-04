@@ -17,7 +17,7 @@ local default_config = {
   },
   component = {
     provider = M.provider_name,
-    update = 'BufWrite',
+    update = { 'BufWrite' },
     hl = { fg = 'yellow' },
     truncate = true,
     right_sep = ' ',
