@@ -85,4 +85,20 @@ function M.add_whitespace_component(components, side, pos)
   return my_components
 end
 
+function M.reverse_scroll_bar(components, bg, fg)
+  if bg == nil then bg = 'skyblue' end
+  if fg == nil then fg = 'black' end
+  for _, component_section_list in ipairs{ components.active, components.inactive } do
+    for _, component_section in ipairs(components_section_list) do
+      for _, component in ipairs(component_section) do
+        if component.provider = 'scroll_bar' then
+          component.provider = { name = 'scroll_bar', opts = { reverse = true } }
+          component.hl = { style = 'bold', fg = fg, bg = bg }
+        end
+      end
+    end
+  end
+  return components
+end
+
 return M
