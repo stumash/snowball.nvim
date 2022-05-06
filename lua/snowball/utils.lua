@@ -85,6 +85,10 @@ function M.add_whitespace_component(components, side, pos)
   return my_components
 end
 
+-- @param table components: a table of feline components
+-- @param string bg: the background color for the scroll_bar component
+-- @param string fg: the foreground color for the scroll_bar component
+-- @return the feline components table with the scroll_bar component modified to go in reverse
 function M.reverse_scroll_bar(components, bg, fg)
   if bg == nil then bg = 'skyblue' end
   if fg == nil then fg = 'black' end
