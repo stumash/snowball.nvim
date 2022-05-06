@@ -91,7 +91,7 @@ function M.reverse_scroll_bar(components, bg, fg)
   for _, component_section_list in ipairs{ components.active, components.inactive } do
     for _, component_section in ipairs(components_section_list) do
       for _, component in ipairs(component_section) do
-        if component.provider = 'scroll_bar' then
+        if component.provider == 'scroll_bar' then
           component.provider = { name = 'scroll_bar', opts = { reverse = true } }
           component.hl = { style = 'bold', fg = fg, bg = bg }
         end
