@@ -34,9 +34,12 @@ snowball.setup {
   }
 }
 
+local feline_default = require'feline.presets'.default
+-- or on newer versions of feline: require'feline.default_components'.statusline.icons
+
 require'feline'.setup {
   custom_providers = { [snowball.provider_name] = snowball.provider },
-  components = snowball.add_whitespace_components(require'feline.presets'.default),
+  components = snowball.add_whitespace_components(feline_default),
 }
 ```
 
