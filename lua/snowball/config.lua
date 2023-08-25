@@ -27,7 +27,7 @@ local default_config = {
 
 M.labels_alternate = {
   prefix = '',
-  trailing = '﬋',
+  trailing = '▢﬋',
   mixed_indent = '',
 }
 
