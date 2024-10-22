@@ -27,8 +27,8 @@ local default_config = {
 
 M.labels_alternate = {
   prefix = '',
-  trailing = '▢﬋',
-  mixed_indent = '',
+  trailing = '▢󱞦',
+  mixed_indent = '',
 }
 
 -- let the user cofigure the component
